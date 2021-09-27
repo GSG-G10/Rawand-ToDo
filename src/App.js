@@ -2,7 +2,7 @@
 import './App.css';
 import React ,{useState} from 'react';
 import ContextData from './ContextData/ContextData';
-import ToDo from './Componentes/ToDo';
+import ToDo from './Componentes/ToDo/ToDo';
 import ToDoForm from './Componentes/ToDoForm';
 function App() {
   const [todos, setTodos] = useState([

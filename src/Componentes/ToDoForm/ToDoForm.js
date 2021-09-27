@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Input } from 'antd';
 import 'antd/dist/antd.css';
+import './ToDoForm.css'
 function ToDoForm ({addTodo}){
     const [value,setValue]=useState("")
     const handleSubmit = (e)=>{
@@ -19,8 +20,10 @@ function ToDoForm ({addTodo}){
     
     return(
 <div>
+    <h1 className="title">ToDo</h1>
+  
 <form onSubmit={handleSubmit}>
-<Input placeholder="Basic usage" onChange={(e)=>setValue(e.target.value)} value={value}/>
+<Input placeholder="Enter DoTo" onChange={(e)=>setValue(e.target.value)} value={value}/>
 </form>
 </div>
     )

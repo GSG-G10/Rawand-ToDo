@@ -3,9 +3,9 @@ import { Card, Col, Row } from 'antd';
 import 'antd/dist/antd.css';
 import { Button } from 'antd';
 import './ToDo.css'
-function ToDo({index,todo,key}){
+function ToDo({index,todo,key,setTodos}){
   
-  
+ 
     return(
      <div className="contanier">
         

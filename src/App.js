@@ -25,19 +25,21 @@ function App() {
   }
   return (
     <div className="App">
-     <ContextData.Provider value={{todos,setTodos}}>
+    
+     <ToDoForm addTodo={addTodo}/>
      {todos.map((todo, index) => (
           <ToDo
             key={index}
             index={index}
             todo={todo}
+            setTodos={setTodos}
          
           />
         ))}
        
-       <ToDoForm addTodo={addTodo}/>
+    
          
-     </ContextData.Provider>
+    
     </div>
   );
 }

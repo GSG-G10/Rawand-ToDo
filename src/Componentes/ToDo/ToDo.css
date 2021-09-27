@@ -1,0 +1,22 @@
+
+/* .site-button-ghost-wrapper {
+    padding: 26px 16px 16px;
+    background: rgb(91, 180, 180);
+    
+    
+  } */
+.ant-btn.ant-btn-background-ghost {
+   
+    color: #000;
+    border-color: rgb(56, 29, 29);
+    background-color: rgb(196, 171, 219);
+    margin-left: 15px;
+}
+
+.contanier{
+    margin-left: 15px;
+  
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 30%;
+}

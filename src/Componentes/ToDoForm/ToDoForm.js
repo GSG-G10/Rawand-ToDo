@@ -9,7 +9,7 @@ function ToDoForm ({addTodo}){
         e.preventDefault();
         if (!value) {
            
-         {console.log('err')}
+       return ''
         }
         else{
             addTodo(value)
@@ -17,18 +17,18 @@ function ToDoForm ({addTodo}){
         }
    
     }
-  
-    const validateMessages = {
-        required: '${label} is required!',
-        types: {
-          text: '${label} is not a valid todo!',
+  /* make prolem in depoly ,so i comment it*/
+    // const validateMessages = {
+    //     required: '${label} is required!',
+    //     types: {
+    //       text: '${label} is not a valid todo!',
        
-        },}
+    //     },}
     return(
 <div>
     <h1 className="title">ToDo</h1>
   
-<Form onSubmitCapture={handleSubmit} validateMessages={validateMessages}>
+<Form onSubmitCapture={handleSubmit} /*validateMessages={validateMessages}> */ >
 <Form.Item
         label=""
         name="ToDo"

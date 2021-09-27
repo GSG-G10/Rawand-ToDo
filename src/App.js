@@ -3,7 +3,7 @@ import './App.css';
 import React ,{useState} from 'react';
 import ContextData from './ContextData/ContextData';
 import ToDo from './Componentes/ToDo/ToDo';
-import ToDoForm from './Componentes/ToDoForm';
+import ToDoForm from './Componentes/ToDoForm/ToDoForm';
 function App() {
   const [todos, setTodos] = useState([
     {
@@ -19,6 +19,10 @@ function App() {
       isCompleted: false
     }
   ]);
+  const addTodo =(text)=>{
+    const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  }
   return (
     <div className="App">
      <ContextData.Provider value={{todos,setTodos}}>
@@ -30,8 +34,8 @@ function App() {
          
           />
         ))}
-{/*        
-       <ToDoForm /> */}
+       
+       <ToDoForm addTodo={addTodo}/>
          
      </ContextData.Provider>
     </div>

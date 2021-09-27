@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Input,Form,Button } from 'antd';
+import { Input,Form } from 'antd';
 import 'antd/dist/antd.css';
 import './ToDoForm.css'
 function ToDoForm ({addTodo}){
@@ -34,7 +34,7 @@ function ToDoForm ({addTodo}){
         name="ToDo"
         rules={[{ required: true, message: 'Please input your ToDo Item!' }]}
       ></Form.Item>
-        <Input onChange={(e)=>setValue(e.target.value)} value={value} rules={[{ required: true, message: 'Please input your username!' }]} />
+        <Input onChange={(e)=>setValue(e.target.value)} value={value} rules={[{ required: true, message: 'Please input your username!' }]} type="text" />
 {/* <Input placeholder="Enter DoTo" onChange={(e)=>setValue(e.target.value)} value={value}/> */}
 
 </Form>

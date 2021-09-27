@@ -23,6 +23,17 @@ function App() {
     const newTodos = [...todos, { text }];
     setTodos(newTodos);
   }
+  const completeTodo =(index)=>{
+    const newTodos = [...todos];
+    newTodos[index].isCompleted = true;
+    setTodos(newTodos);
+  }
+  
+  const removeTodo = index => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
   return (
     <div className="App">
     
@@ -32,7 +43,9 @@ function App() {
             key={index}
             index={index}
             todo={todo}
-            setTodos={setTodos}
+         
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
          
           />
         ))}

@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import React ,{useState} from 'react';
+import ContextData from './ContextData/ContextData';
+import ToDo from './Componentes/ToDo';
+import ToDoForm from './Componentes/ToDoForm';
 function App() {
+  const [todos, setTodos] = useState([
+    {
+      text: "Learn about React",
+      isCompleted: false
+    },
+    {
+      text: "Meet friend for lunch",
+      isCompleted: false
+    },
+    {
+      text: "Build really cool todo app",
+      isCompleted: false
+    }
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <ContextData.Provider value={{todos,setTodos}}>
+     {todos.map((todo, index) => (
+          <ToDo
+            key={index}
+            index={index}
+            todo={todo}
+         
+          />
+        ))}
+{/*        
+       <ToDoForm /> */}
+         
+     </ContextData.Provider>
     </div>
   );
 }
